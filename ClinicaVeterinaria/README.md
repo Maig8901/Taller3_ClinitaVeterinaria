@@ -46,6 +46,12 @@ src/main/java/clinicaveterinaria/
 
 - Integrante 1: refactorizar SRP.
 - Integrante 2: refactorizar OCP.
+- ¿Por qué los condicionales repetidos hacen más caro el cambio?
+Porque en caso de agregar una nueva regla de negocio tendríamos que buscar y modificar cada condicional repetido
+- ¿Qué pasaría si agregamos `Odontologia` como tratamiento?
+Con el diseño antiguo necesitaría modificar varias clases, pero aplicando el OCP solo necesitariamos cambiar una
+- ¿Cuándo una interfaz ayuda a extender el sistema?
+Cuando hay diferentes variantes de un mismo comportamiento, el codigo necesita solo la base, no saber cual variante es.
 - Integrante 3: refactorizar LSP.
 - Integrante 4: refactorizar ISP y DIP.
 

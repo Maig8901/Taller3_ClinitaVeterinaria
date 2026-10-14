@@ -287,6 +287,11 @@ Preguntas de discusión:
 - ¿Qué problema causa una interfaz gigante en equipos grandes?
 - ¿Por qué `new DirectoBaseDatos()` dificulta cambiar o probar la clase?
 - ¿Qué dependencia debería conocer el código de alto nivel: interfaz o clase concreta?
+1\. ¿Qué problema causa una interfaz gigante en equipos grandes? Obliga a las clases a implementar métodos que no necesitan, genera dependencias innecesarias y dificulta el mantenimiento y el trabajo en equipo.
+
+2\. ¿Por qué `new DirectoBaseDatos()` dificulta cambiar o probar la clase? Porque crea una dependencia directa con una implementación concreta. Esto dificulta reemplazarla por otra base de datos o utilizar una versión simulada para realizar pruebas.
+
+3\. ¿Qué dependencia debería conocer el código de alto nivel: interfaz o clase concreta? Debe depender de una interfaz, porque permite cambiar las implementaciones sin modificar el código de alto nivel, cumpliendo el principio DIP.
 
 ## Checklist de validación general
 

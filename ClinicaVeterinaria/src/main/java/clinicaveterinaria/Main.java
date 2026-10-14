@@ -1,11 +1,26 @@
 package clinicaveterinaria;
 
-import clinicaveterinaria.model.*;
-import clinicaveterinaria.repository.*;
-import clinicaveterinaria.service.*;
-
-
 import java.time.LocalDate;
+
+import clinicaveterinaria.model.Cita;
+import clinicaveterinaria.model.Factura;
+import clinicaveterinaria.model.Mascota;
+import clinicaveterinaria.model.Pez;
+import clinicaveterinaria.model.TipoAnimal;
+import clinicaveterinaria.model.TipoTratamiento;
+import clinicaveterinaria.model.Tratamiento;
+import clinicaveterinaria.model.Veterinario;
+import clinicaveterinaria.repository.BaseDatos;
+import clinicaveterinaria.service.CalculadoraCostoTratamiento;
+import clinicaveterinaria.service.Clinica;
+import clinicaveterinaria.service.DiagnosticoService;
+import clinicaveterinaria.service.FacturacionService;
+import clinicaveterinaria.service.MascotaService;
+import clinicaveterinaria.service.ReporteService;
+import clinicaveterinaria.service.ReservaService;
+import clinicaveterinaria.service.ServicioClinicaCompleto;
+import clinicaveterinaria.service.TratamientoService;
+import clinicaveterinaria.service.VeterinarioCrudService;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,9 +66,9 @@ public class Main {
         veterinario.diagnosticar(citaDesdeModelo, "Ejemplo de SRP violado desde el modelo.");
         System.out.println(veterinario.crearReporte(citaDesdeModelo));
 
-        Animal pez = new Pez(3, "Nemo");
+        Pez pez = new Pez(3, "Nemo");
         pez.nadar();
-        System.out.println("El pez heredó caminar() y volar(), aunque no debe usarlos.");
+        System.out.println("El pez ahora implementa la interfaz Nadador correctamente.");
         System.out.println("Tratamiento OCP violado pero funcional: " + tratamiento.obtenerIndicaciones());
     }
 }

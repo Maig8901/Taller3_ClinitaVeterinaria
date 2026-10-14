@@ -51,7 +51,7 @@ src/main/java/clinicaveterinaria/
 | :--- | :---: | :--- |
 | **El proyecto compila** | **Sí** | Todo el código refactorizado mantiene la integridad de tipos e interfaces. |
 | **Veterinario ya no reserva, diagnostica, factura ni reporta** | **Sí** | Las responsabilidades operativas y de negocio se delegaron a sus respectivos servicios (`ReservaService`, `DiagnosticoService`, `FacturacionService`, `ReporteService`). |
-| **La funcionalidad del Main se mantiene** | **Sí** | El flujo de ejecución original sigue intacto mediante la orquestación de servicios. |
+| **La funcionalidad del Main se mantiene** | **Sí** | El flujo de ejecución original sigue intacto mediante la organización de servicios. |
 | **Los nombres de servicios son claros** | **Sí** | Cada clase de servicio refleja explícitamente su único propósito funcional. |
 
 ---

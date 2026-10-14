@@ -10,6 +10,7 @@ import clinicaveterinaria.model.Pez;
 import clinicaveterinaria.model.TipoAnimal;
 import clinicaveterinaria.model.TipoTratamiento;
 import clinicaveterinaria.model.Tratamiento;
+import clinicaveterinaria.model.VacunaTratamiento;
 import clinicaveterinaria.model.Veterinario;
 import clinicaveterinaria.repository.BaseDatos;
 import clinicaveterinaria.service.CalculadoraCostoTratamiento;
@@ -36,7 +37,7 @@ public class Main {
 
         Mascota mascota = new Mascota(1, "Luna", TipoAnimal.PERRO, 4, "Ana Perez");
         Veterinario veterinario = new Veterinario(1, "Dr. Ruiz", "Medicina general", true);
-        Tratamiento tratamiento = new VacunaTratamiento(1, "Esterilizacion", 120.0);
+        Tratamiento tratamiento = new VacunaTratamiento(1 , "Esterilizacion", 120.0);
 
         mascotaService.crearMascota(mascota);
         veterinarioCrudService.crearVeterinario(veterinario);
